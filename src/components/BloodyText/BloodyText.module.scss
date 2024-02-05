@@ -1,11 +1,10 @@
 .heading {
     position: relative;
-    padding-top: 5rem;
-    font-size: 10rem;
+    font-size: 15rem;
     letter-spacing: 1rem;
-    display: flex;
-    justify-content: space-around;
-    height: min-content;
+    // display: flex;
+    // justify-content: space-around;
+    // height: min-content;
 }
 
 .letter {
@@ -33,7 +32,7 @@
         }
 
         &:nth-child(4) {
-            left: 80%;
+            left: 82%;
             animation-delay: -.10s;
         }
     }
@@ -41,7 +40,7 @@
     &_6 {
 
         &:nth-child(1) {
-            left: 6%;
+            left: 7%;
         }
 
         &:nth-child(2) {
@@ -64,7 +63,7 @@
         }
 
         &:nth-child(6) {
-            left: 86%;
+            left: 87%;
             animation-delay: -.10s;
         }
     }
