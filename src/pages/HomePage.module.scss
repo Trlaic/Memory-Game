@@ -1,6 +1,10 @@
 .container {
+    overflow: hidden;
+    font-family: 'Protest Guerrilla', sans-serif;
     height: 100vh;
     width: 100vw;
-    background-color: #595959;
-    color: white;
+    background: linear-gradient(#000000, #121212);
+    color: #880808;
+    display: flex;
+    justify-content: space-evenly;
 }
