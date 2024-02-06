@@ -1,4 +1,5 @@
 import BloodyText from '../components/BloodyText/BloodyText'
+import CardsHomePage from '../components/CardsHomePage'
 import styles from './HomePage.module.scss'
 
 function HomePage() {
@@ -8,6 +9,7 @@ function HomePage() {
                 <BloodyText text='memory' />
                 <BloodyText text='game' />
             </div>
+            <CardsHomePage />
         </div>
     ) 
 }

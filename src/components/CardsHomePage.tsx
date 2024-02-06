@@ -1,4 +1,5 @@
 import styles from './CardsHomePage.module.scss'
+import CompleteCard from './CompleteCard/CompleteCard'
 
 const CardsHomePage = () => {
 
@@ -6,7 +7,7 @@ const CardsHomePage = () => {
         <div className={styles.gridContainer}>
             <div className={styles.gridItem}>
                 <div className={styles.topLeft}>A<br />
-                <div style={{ color: 'black' }}>♥</div>
+                <div>♥</div>
                 </div>
                 <div></div>
                 <div></div>
@@ -16,27 +17,13 @@ const CardsHomePage = () => {
                 <div></div>
                 <div></div>
                 <div className={styles.bottomRight}>A<br />
-                <div style={{ color: 'black' }}>♥</div>  
+                <div>♥</div>  
                 </div>
             </div>
-            <div className={`${styles.gridItem} ${styles.gridItem2}`}>
-                <div><br />
-                <div></div>
-                </div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div><br />
-                <div></div>
-                </div>
-            </div>
+            <CompleteCard text='5' image='5' />
             <div className={styles.gridItem}>
                 <div className={styles.topLeft}>A<br />
-                <div style={{ color: 'black' }}>♥</div>
+                <div>♥</div>
                 </div>
                 <div></div>
                 <div></div>
@@ -46,7 +33,7 @@ const CardsHomePage = () => {
                 <div></div>
                 <div></div>
                 <div className={styles.bottomRight}>A<br />
-                <div style={{ color: 'black' }}>♥</div>  
+                <div>♥</div>  
                 </div>
             </div>
         </div>
