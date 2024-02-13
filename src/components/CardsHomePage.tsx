@@ -20,7 +20,7 @@ const CardsHomePage = () => {
                 <div>♥</div>  
                 </div>
             </div>
-            <CompleteCard text='5' image='5' />
+            <CompleteCard text='PLAY'/>
             <div className={styles.gridItem}>
                 <div className={styles.topLeft}>A<br />
                 <div>♥</div>

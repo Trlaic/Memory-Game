@@ -1,0 +1,24 @@
+.audio_container {
+    position: fixed;
+    top: 3rem;
+    right: 3rem;
+    width: 6rem;
+    cursor: pointer;
+}
+
+.audio {
+    display: block;
+    width: 100%;
+}
+
+.audio_block::before {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    top: 30%;
+    left: -35%;
+    width: 110%;
+    height: 110%;
+    border-top: 5px solid #880808;
+    transform: rotate(45deg);
+}

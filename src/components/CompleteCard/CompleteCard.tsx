@@ -2,20 +2,19 @@ import React from 'react'
 import styles from './CompleteCard.module.scss'
 
 interface ComponentProps {
-    text: string,
-    image: string
+    text?: string,
+    image?: string
 }
 
 const CompleteCard: React.FC<ComponentProps> = ({text, image}) => {
-    console.log(text, image)
     return (
         <div className={styles.card}>
             <div className={styles.cardInner}>
                 <div className={styles.cardFront}>
-
+                    &nbsp;
                 </div>
                 <div className={styles.cardBack}>
-                    <h2 className={styles.heading2}>PLAY</h2>
+                    {text ? <h2 className={styles.heading2}>{text}</h2> : image}
                 </div>
             </div>
         </div>
