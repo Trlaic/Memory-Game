@@ -1,15 +1,7 @@
 .card {
-    // display: grid;
-    // grid-template-columns: 1fr 1fr 1fr;
-    // grid-template-rows: 1fr 2fr 1fr;
-    // background-color: #880808;
-    // color: rgb(0, 0, 0);
     font-size: 1.75rem;
     perspective: 50rem;
     background-color: transparent;
-    // margin-right: 10px;
-    // box-shadow: 0px 5px 15px grey;
-    cursor: pointer;
 }
 
 .cardInner {
@@ -51,6 +43,7 @@
 .heading2 {
     font-size: 5rem;
     letter-spacing: 5px;
+    cursor: pointer;
 }
 
 // .gridItem2 {

@@ -7,6 +7,7 @@ interface ComponentProps {
 }
 
 const CompleteCard: React.FC<ComponentProps> = ({text, image}) => {
+
     return (
         <div className={styles.card}>
             <div className={styles.cardInner}>
