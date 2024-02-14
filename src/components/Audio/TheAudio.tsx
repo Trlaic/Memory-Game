@@ -20,7 +20,7 @@ const TheAudio = () => {
 
     return (
         <div className={`${styles.audio_container} ${audioStyling}`} onClick={toggleAudio}>
-            <img className={styles.audio} src="../../../public/musical_note.png" alt="Note" />
+            <img className={styles.audio} src="../../../public/musical_note.png" alt="Audio" />
         </div>
     )
 }
