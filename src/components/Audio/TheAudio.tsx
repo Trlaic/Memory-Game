@@ -13,6 +13,7 @@ const TheAudio = () => {
             setAudio(false)
         } else {
             audioRef.current.play()
+            audioRef.current.loop = true
             setAudio(true)
         }
     }
