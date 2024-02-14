@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import styles from './CompleteCard.module.scss'
+import { useNavigate } from 'react-router-dom'
 
 interface ComponentProps {
     text?: string,
@@ -8,6 +9,14 @@ interface ComponentProps {
 
 const CompleteCard: React.FC<ComponentProps> = ({text, image}) => {
 
+    const navigate = useNavigate()
+    const headingRef = useRef<HTMLHeadingElement>(null)
+    function handleClick() {
+        if(headingRef.current?.textContent === 'PLAY') {
+          navigate('/main-menu')
+        }
+    }
+
     return (
         <div className={styles.card}>
             <div className={styles.cardInner}>
@@ -15,7 +24,7 @@ const CompleteCard: React.FC<ComponentProps> = ({text, image}) => {
                     &nbsp;
                 </div>
                 <div className={styles.cardBack}>
-                    {text ? <h2 className={styles.heading2}>{text}</h2> : image}
+                    {text ? <h2 ref={headingRef} onClick={handleClick} className={styles.heading2}>{text}</h2> : image}
                 </div>
             </div>
         </div>
