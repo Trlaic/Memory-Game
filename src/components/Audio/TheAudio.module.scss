@@ -3,18 +3,19 @@
     top: 3rem;
     right: 3rem;
     width: 6rem;
-    cursor: pointer;
 }
 
 .audio {
+    position: relative;
     display: block;
+    z-index: 2;
     width: 100%;
+    cursor: pointer;
 }
 
 .audio_block::before {
     content: '';
     position: absolute;
-    z-index: 2;
     top: 30%;
     left: -35%;
     width: 110%;
