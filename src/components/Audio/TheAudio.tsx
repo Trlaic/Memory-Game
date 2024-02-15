@@ -12,6 +12,14 @@ const TheAudio = () => {
             audioRef.current.currentTime = 0
             setAudio(false)
         } else {
+            const random = Math.random()
+            if(random < 0.2) {
+                audioRef.current = new Audio('../../../public/authorized_music.mp3')
+            } else if(random < 0.6) {
+                audioRef.current = new Audio('../../../public/tropical_music.mp3')
+            } else {
+                audioRef.current = new Audio('../../../public/colorful_flowers.mp3')
+            }
             audioRef.current.play()
             audioRef.current.loop = true
             setAudio(true)
