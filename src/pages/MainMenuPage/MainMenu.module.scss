@@ -1,6 +1,7 @@
 .container {
     position: relative;
     height: 100vh;
+    overflow: hidden;
 }
 
 .video {
@@ -13,12 +14,17 @@
     filter: grayscale(100%)
 }
 
-.button {
+.button,
+.options_menu,
+.options_container {
     position: absolute;
     z-index: 2;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.button {
     border-radius: 50%;
     border: none;
     background-color: transparent;
@@ -30,4 +36,26 @@
 
 .hidden {
     display: none;
+}
+
+.options_menu {
+    width: 2rem;
+    height: 6rem;
+    background-color: #08872C;
+    border-radius: 50%;
+    animation: appearing 2s both;
+}
+
+@keyframes appearing {
+    99% {
+        width: 130%;
+        height: 200%;
+        border-radius: 50%;
+    }
+
+    100% {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
 }
