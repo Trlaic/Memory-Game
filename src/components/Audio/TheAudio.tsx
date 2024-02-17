@@ -3,7 +3,7 @@ import styles from './TheAudio.module.scss'
 
 const TheAudio = () => {
     const [audio, setAudio] = useState(false)
-    const audioRef = useRef(new Audio('../../../public/authorized_music.mp3'))
+    const audioRef = useRef(new Audio())
     const audioStyling = audio ? '' : styles.audio_block
 
     function toggleAudio() {

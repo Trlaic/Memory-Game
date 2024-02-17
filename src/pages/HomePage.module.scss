@@ -17,3 +17,36 @@
     justify-content: space-evenly;
     align-items: center;
 }
+
+.letters_animation {
+    animation: appear 5s both;
+}
+
+.cards_animation {
+    animation: popUp 1s both;
+    animation-delay: 5s;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes popUp {
+    0% {
+        transform: translateY(150rem);
+    }
+
+    70% {
+        transform: translateY(-5rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
