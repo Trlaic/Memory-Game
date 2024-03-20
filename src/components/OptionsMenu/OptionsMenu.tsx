@@ -5,9 +5,9 @@ const OptionsMenu = () => {
         <div className={styles.container}>
             <h2 className={styles.heading}>Choose</h2>
             <ul className={styles.list}>
-                <li className={styles.item}>Theme</li>
-                <li className={styles.item}>Cards</li>
-                <li className={styles.item}>Players</li>
+                <li className={styles.item}>12 <span className={styles.span}>cards</span></li>
+                <li className={styles.item}>16 <span className={styles.span}>cards</span></li>
+                <li className={styles.item}>20 <span className={styles.span}>cards</span></li>
             </ul>
         </div>
     )
