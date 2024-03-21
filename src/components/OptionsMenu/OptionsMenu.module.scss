@@ -26,13 +26,14 @@
     background:
         conic-gradient(from -135deg at 100% 50%, var(--c) 90deg, #0000 0) 0 var(--p, 0%)/var(--s, 0%) 200% no-repeat,
         conic-gradient(from -135deg at 1.2em 50%, #0000 90deg, var(--c) 0) 100% var(--p, 0%)/var(--s, 0%) 200% no-repeat;
-    transition: .4s ease-in, background-position 0s, color .4s;
+    transition: .4s ease-in, background-position 0s, color .4s, transform .4s;
 }
 
 .item:hover {
     --p: 100%;
     --s: calc(50% + .61em);
     color: #880808;
+    transform: translateY(-1rem) scale(1.2);
 }
 
 .span {
