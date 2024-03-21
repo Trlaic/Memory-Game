@@ -9,6 +9,7 @@ const TheFullscreen = () => {
             document.exitFullscreen()
         } else {
             bodyRef.current.requestFullscreen()
+            bodyRef.current.style.overflow = 'auto';
         }
     }
     

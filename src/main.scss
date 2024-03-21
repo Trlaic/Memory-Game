@@ -7,6 +7,10 @@
     padding: 0;
 }
 
+body {
+    user-select: none;
+}
+
 #pill {
     height: 3rem;
     width: 3rem;
