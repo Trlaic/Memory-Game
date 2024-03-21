@@ -16,7 +16,7 @@ function App() {
         document.exitFullscreen()
       } else if((e.key === 'f' || e.key === 'F') && !document.fullscreenElement) {
         bodyRef.current.requestFullscreen()
-        bodyRef.current.style.overflow = 'auto';
+        bodyRef.current.style.overflowY = 'auto';
       }
     })
   }, [])
