@@ -1,9 +1,9 @@
 function disableBodyInteractionForTime(milliseconds: number) {
-    document.body.classList.add('disabled');
+    document.body.classList.add('disabled')
   
     setTimeout(function() {
-      document.body.classList.remove('disabled');
-    }, milliseconds);
+      document.body.classList.remove('disabled')
+    }, milliseconds)
   }
 
 export default disableBodyInteractionForTime

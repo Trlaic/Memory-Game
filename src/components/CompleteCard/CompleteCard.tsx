@@ -5,10 +5,11 @@ import { useNavigate } from 'react-router-dom'
 interface ComponentProps {
     text?: string,
     image?: ReactNode,
-    gameCard?: boolean
+    gameCard?: boolean,
+    serialNumber?: number
 }
 
-const CompleteCard: React.FC<ComponentProps> = ({text, image, gameCard}) => {
+const CompleteCard: React.FC<ComponentProps> = ({text, image, gameCard, serialNumber}) => {
 
     const navigate = useNavigate()
     const homeCardStyle = gameCard !== true ? styles.homeCard : styles.gameCard
@@ -23,7 +24,7 @@ const CompleteCard: React.FC<ComponentProps> = ({text, image, gameCard}) => {
     
     return (
         <div className={`${styles.card} ${homeCardStyle}`}>
-            <div datatype='complete-card-wrapper' ref={cardInnerRef} className={styles.cardInner}>
+            <div datatype={`complete-card-wrapper-${serialNumber}`} ref={cardInnerRef} className={styles.cardInner}>
                 <div datatype='complete-card' className={styles.cardFront}>
                     &nbsp;
                 </div>

@@ -16,10 +16,9 @@ const PlayPage = () => {
     function handleClick(event: React.MouseEvent<HTMLDivElement>) {   
         const target = event.target as HTMLElement;
         if (target.getAttribute('datatype') === 'complete-card') {
-            disableBodyInteractionForTime(1000)
+            disableBodyInteractionForTime(500)
             cardInnerClicked+=1
-            const targetWrapper = target.closest("[datatype='complete-card-wrapper']") as HTMLDivElement;
-            
+            const targetWrapper = target.closest("[datatype^='complete-card-wrapper']") as HTMLDivElement;
             if(cardInnerClicked % 2 !== 0) {
                 previousCard = targetWrapper
             }
@@ -27,14 +26,18 @@ const PlayPage = () => {
             targetWrapper.style.transform = 'rotateY(180deg)'
             
             if(cardInnerClicked > 0 && cardInnerClicked % 2 === 0) {
-                console.log('xxx')
                 setTimeout(() => {
+                    if(targetWrapper.getAttribute('datatype') === previousCard?.getAttribute('datatype')) {
+                        targetWrapper.style.visibility = 'hidden'
+                        previousCard.style.visibility = 'hidden'
+                        return
+                    }
                     targetWrapper.style.transform = 'rotateY(0deg)'
                     if(previousCard) {
                         console
                         previousCard.style.transform = 'rotateY(0deg)'
                     }
-                }, 1000)
+                }, 1250)
             }
         }
     }
@@ -52,7 +55,7 @@ const PlayPage = () => {
         for(let i = 0; i < numOfCards; i+=1) {
             if(i === max) temp = 0
             image = <img src={`/game-images/img-${temp+1}.jpg`} className={style.image} alt='image'/>
-            output = <CompleteCard key={i} image={image} gameCard={true}/>;
+            output = <CompleteCard serialNumber={temp+1} key={i} image={image} gameCard={true}/>;
             arrOfCards.push(output)
             temp+=1
         }
