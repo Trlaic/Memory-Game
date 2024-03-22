@@ -12,7 +12,6 @@ body {
     overflow-x: hidden;
 }
 
-#pill {
-    height: 3rem;
-    width: 3rem;
+body.disabled {
+    pointer-events: none;
 }

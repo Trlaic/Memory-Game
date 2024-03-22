@@ -1,26 +1,30 @@
-import React, { useRef } from 'react'
+import React, { ReactNode, useRef } from 'react'
 import styles from './CompleteCard.module.scss'
 import { useNavigate } from 'react-router-dom'
 
 interface ComponentProps {
     text?: string,
-    image?: string
+    image?: ReactNode,
+    gameCard?: boolean
 }
 
-const CompleteCard: React.FC<ComponentProps> = ({text, image}) => {
+const CompleteCard: React.FC<ComponentProps> = ({text, image, gameCard}) => {
 
     const navigate = useNavigate()
+    const homeCardStyle = gameCard !== true ? styles.homeCard : styles.gameCard
     const headingRef = useRef<HTMLHeadingElement>(null)
+    const cardInnerRef = useRef<HTMLDivElement>(null)
+    
     function handleClick() {
-        if(headingRef.current?.textContent === 'PLAY') {
-          navigate('/main-menu')
-        }
+      if(headingRef.current?.textContent === 'PLAY') {
+        navigate('/main-menu')
+      }
     }
-
+    
     return (
-        <div className={styles.card}>
-            <div className={styles.cardInner}>
-                <div className={styles.cardFront}>
+        <div className={`${styles.card} ${homeCardStyle}`}>
+            <div datatype='complete-card-wrapper' ref={cardInnerRef} className={styles.cardInner}>
+                <div datatype='complete-card' className={styles.cardFront}>
                     &nbsp;
                 </div>
                 <div className={styles.cardBack}>

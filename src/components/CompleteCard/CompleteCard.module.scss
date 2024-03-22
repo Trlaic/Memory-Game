@@ -13,8 +13,12 @@
     transform-style: preserve-3d;
 }
 
-.card:hover:hover .cardInner {
+.homeCard:hover .cardInner {
     transform: rotateY(180deg);
+}
+
+.gameCard {
+    cursor: pointer;
 }
 
 .cardFront,
@@ -24,6 +28,7 @@
     height: 100%;
     border-radius: 5%;
     backface-visibility: hidden;
+    overflow: hidden;
 }
 
 .cardFront {

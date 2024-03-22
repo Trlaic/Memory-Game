@@ -1,12 +1,44 @@
 import { useParams } from 'react-router-dom'
 import style from './PlayPage.module.scss'
 import CompleteCard from '../../components/CompleteCard/CompleteCard'
+import shuffleArray from '../../functions/shuffleArray'
+import disableBodyInteractionForTime from '../../functions/disableUserInteraction'
 
 const PlayPage = () => {
 
     const {id} = useParams()
     const gridStyle = id === '12' ? style.grid_1 : id === '16' ? style.grid_2 : style.grid_3 
     
+    let cardInnerClicked = 0
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    let previousCard: HTMLDivElement | null
+    
+    function handleClick(event: React.MouseEvent<HTMLDivElement>) {   
+        const target = event.target as HTMLElement;
+        if (target.getAttribute('datatype') === 'complete-card') {
+            disableBodyInteractionForTime(1000)
+            cardInnerClicked+=1
+            const targetWrapper = target.closest("[datatype='complete-card-wrapper']") as HTMLDivElement;
+            
+            if(cardInnerClicked % 2 !== 0) {
+                previousCard = targetWrapper
+            }
+            
+            targetWrapper.style.transform = 'rotateY(180deg)'
+            
+            if(cardInnerClicked > 0 && cardInnerClicked % 2 === 0) {
+                console.log('xxx')
+                setTimeout(() => {
+                    targetWrapper.style.transform = 'rotateY(0deg)'
+                    if(previousCard) {
+                        console
+                        previousCard.style.transform = 'rotateY(0deg)'
+                    }
+                }, 1000)
+            }
+        }
+    }
+
     function renderCards() {
         const numOfCards = Number(id)
         if(numOfCards !== 12 && numOfCards !== 16 && numOfCards !== 20) {
@@ -14,16 +46,23 @@ const PlayPage = () => {
         }
         const arrOfCards = []
         let output
+        let image
+        let temp = 0
+        const max = numOfCards === 12 ? 6 : numOfCards === 16 ? 8 : 10
         for(let i = 0; i < numOfCards; i+=1) {
-            output = <CompleteCard key={i} text='CARD'/>;
+            if(i === max) temp = 0
+            image = <img src={`/game-images/img-${temp+1}.jpg`} className={style.image} alt='image'/>
+            output = <CompleteCard key={i} image={image} gameCard={true}/>;
             arrOfCards.push(output)
+            temp+=1
         }
-        return arrOfCards
+        const arrayShuffled = shuffleArray(arrOfCards)
+        return arrayShuffled
     } 
 
     return (
         <div className={style.container}>
-            <div className={`${style.grid} ${gridStyle}`}>
+            <div onClick={handleClick} className={`${style.grid} ${gridStyle}`}>
                 {renderCards()}
             </div>
         </div>
