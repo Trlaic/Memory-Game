@@ -1,0 +1,28 @@
+.grid {
+    display: grid;
+    grid-gap: 3rem;
+    justify-content: center;
+    width: 75vw;
+    height: 100%;
+    padding-top: 10rem;
+    padding-bottom: 5rem;
+}
+
+.grid_1 {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 20rem);
+}
+
+.grid_2 {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 20rem);
+}
+
+.grid_3 {
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 20rem);
+}
+
+.image {
+    height: 100%;
+}
