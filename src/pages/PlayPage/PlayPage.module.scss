@@ -1,9 +1,10 @@
 .container {
     display: flex;
+    font-family: 'Protest Guerrilla', sans-serif;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    max-height: 200vh;
     width: 100vw;
     background: linear-gradient(#000000, #121212);
     overflow: hidden;
@@ -16,7 +17,8 @@
     justify-content: center;
     width: 75vw;
     height: 100%;
-    padding: 10rem 0;
+    padding-top: 10rem;
+    padding-bottom: 5rem;
 }
 
 .grid_1 {

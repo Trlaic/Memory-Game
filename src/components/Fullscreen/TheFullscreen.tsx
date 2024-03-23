@@ -15,7 +15,7 @@ const TheFullscreen = () => {
     
     return (
         <div className={styles.container}>
-            <img className={styles.image} onClick={handleFullscreen} src="../../../public/fullscreen.png" alt="Fullscreen" />
+            <img className={styles.image} onClick={handleFullscreen} src="/fullscreen.png" alt="Fullscreen" />
         </div>
     )
 }

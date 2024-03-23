@@ -24,11 +24,11 @@ const MainMenu = () => {
     return (
         <div className={styles.container}>
             <video ref={videoRef} className={styles.video} autoPlay loop muted>
-                <source src="../../../../public/castle.mp4" type="video/mp4" />
+                <source src="/castle.mp4" type="video/mp4" />
                 Your browser doesn't support the video tag
             </video>
             <button ref={buttonRef} className={`${styles.button} ${styles.button_animation}`}>
-                <img onMouseEnter={openOptionsMenu} className={styles.image} src="../../../../public/icons8-bat-100.png" alt="Button options" />
+                <img onMouseEnter={openOptionsMenu} className={styles.image} src="/icons8-bat-100.png" alt="Button options" />
             </button>
             <div ref={menuRef} className={`${styles.hidden} ${styles.options_menu}`}>
                 <div ref={optionsRef} className={`${styles.hidden} ${styles.options_container}`}>
