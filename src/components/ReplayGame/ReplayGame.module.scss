@@ -68,3 +68,11 @@
 .button:active {
     transform: translateY(2px);
 }
+
+.button:not(:last-child) {
+    margin-right: 5px;
+}
+
+.buttons {
+    display: flex;
+}
