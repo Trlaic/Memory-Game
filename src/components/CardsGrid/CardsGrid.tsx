@@ -11,7 +11,6 @@ interface ComponentProps {
 }
 
 const CardsGrid : React.FC<ComponentProps> = React.memo(({ id, moveMade, missMade }) => {
-    console.log('CARDS GRID RENDER')
     const gridStyle = id === 12 ? style.grid_1 : id === 16 ? style.grid_2 : style.grid_3 
     
     let cardInnerClicked = 0
