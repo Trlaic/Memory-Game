@@ -15,8 +15,8 @@
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #880808;
-    width: 40vh;
-    height: 40vh;
+    width: 50vh;
+    height: 50vh;
     z-index: 2;
     border-radius: 5px;
 
@@ -75,4 +75,5 @@
 
 .buttons {
     display: flex;
+    margin-bottom: 1rem;
 }
