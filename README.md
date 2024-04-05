@@ -11,6 +11,7 @@
   **Functionalities**:  
 - Press 'F' key to enter/exit fullscreen
 - Press _note_ icon in upper right corner to play/stop song (there are 3 songs which are played randomly)  
+***
 **SPOILER ALERT**:  
 List below is a set of instructions on how to get to the memory game through few steps  
 Fot those who don't want to explore by themselves, here is a set of steps on how to get to memory game part.  
