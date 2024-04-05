@@ -1,6 +1,7 @@
 import { Suspense, lazy, useEffect, useRef } from "react"
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import PageSpinner from "./components/PageSpinner/PageSpinner"
+import ErrorPage from "./components/ErrorPage"
 
 const HomePage = lazy(() => import('./pages/HomePage'))
 const HelperMenu = lazy(() => import('./containers/HelperMenu'))
@@ -27,8 +28,10 @@ function App() {
       <Suspense fallback={<PageSpinner />}>   
         <Routes>
           <Route path="/" element={<HomePage />}/>
-          <Route path="/main-menu" element={<MainMenu/>}/>
-          <Route path="/play-game/:id" element={<PlayPage/>}/>
+          <Route path="/main-menu" element={<MainMenu />}/>
+          <Route path="/play-game/:id" element={<PlayPage />}/>
+          <Route path="/non-existent" element={<ErrorPage />}/>
+          <Route path="*" element={<ErrorPage />}/>
         </Routes> 
       </Suspense>
     </BrowserRouter>
